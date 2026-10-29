@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", "Space Grotesk", sans-serif;
+  --font-cursive: "Syne", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Tactical HUD Palette */
+  --color-bg-tactical: #0d0d0f;
+  --color-bg-tactical-card: #111113;
+  --color-bg-tactical-dark: #09090b;
+  --color-ink-tactical: #e4e4e7;
+  --color-accent-tactical: #00ffaa;
+  --color-secondary-tactical: #ff4444;
+  --color-border-tactical: rgba(228, 228, 231, 0.1);
+  --color-ink-muted-tactical: rgba(228, 228, 231, 0.6);
+
+  /* Tactical Shadows & Borders */
+  --shadow-tactical-glow: 0px 0px 15px rgba(0, 255, 170, 0.15);
+  --shadow-tactical-danger-glow: 0px 0px 15px rgba(255, 68, 68, 0.15);
+}
+
+/* Custom sleek scrollbar styles for a futuristic, tactical look */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 170, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 170, 0.45);
+}
+
+/* Firefox scrollbar support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 255, 170, 0.15) transparent;
+}
+
+/* Scrollbar Utility classes */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 170, 0.15);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 170, 0.45);
+}
+
+/* Custom hatching pattern utility */
+.hatch-pattern {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(0, 255, 170, 0.05) 10px, rgba(0, 255, 170, 0.05) 11px);
+}
+
+.hatch-pattern-danger {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 68, 68, 0.05) 10px, rgba(255, 68, 68, 0.05) 11px);
+}
+
+.hatch-pattern-white {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.05) 10px, rgba(255, 255, 255, 0.05) 11px);
+}
+
+/* Custom CSS Micro-animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}

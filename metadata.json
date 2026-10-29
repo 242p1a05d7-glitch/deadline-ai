@@ -1,0 +1,6 @@
+{
+  "name": "Deadline Hero AI",
+  "description": "An autonomous AI productivity companion that predicts deadline risks, generates optimized daily missions, replans schedules dynamically, and acts as an intelligent coach to prevent missed deadlines.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
